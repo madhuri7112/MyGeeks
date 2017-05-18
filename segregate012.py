@@ -24,6 +24,9 @@ def segregate012(num_list):
         elif num_list[mid_index] == 2:
             swap_values(num_list, mid_index, high_index)
             high_index = high_index -1
+        else:
+            print "List has digits other than 0,1,2"
+            exit(0)
 
 
 def swap_values(num_list, index_1, index_2):
