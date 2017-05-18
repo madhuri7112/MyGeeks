@@ -5,7 +5,6 @@ Date: 18-05-2017
 Program: Maximum sum such that no two elements are adjacent
 Reference: http://www.geeksforgeeks.org/maximum-sum-such-that-no-two-elements-are-adjacent/
 
-This solution uses Moore's algorithm
 '''
 
 
