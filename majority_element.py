@@ -1,6 +1,6 @@
 '''
 Author: Madhuri Palagummi
-Date: 07-05-2017
+Date: 18-05-2017
 
 Program: Majority element
 Reference: http://www.geeksforgeeks.org/majority-element/
