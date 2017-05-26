@@ -3,7 +3,7 @@ Author: Madhuri Palagummi
 Date: 25-05-2017
 
 Program: Find two elements whose sum is closest to zero
-Reference: http://www.geeksforgeeks.org/two-elements-whose-sum-is-closest-to-zero/
+Reference: http://www.geeksforgeeks.org/segregate-even-and-odd-numbers/
 
 '''
 
