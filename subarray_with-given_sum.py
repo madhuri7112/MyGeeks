@@ -13,7 +13,7 @@ def subarray_with_given_sum(num_list, target_sum):
     end = 0
     sum = num_list[0]
 
-    while end<len(num_list)-1:
+    while end<len(num_list):
 
         if (sum == target_sum):
             return start, end
@@ -27,21 +27,10 @@ def subarray_with_given_sum(num_list, target_sum):
     return None, None
 
 def main():
-    num_list = [3,2,5,3,3,9,6,2]
+    num_list = [1,1,1,1]
 
-    start, end = subarray_with_given_sum(num_list, 35)
+    start, end = subarray_with_given_sum(num_list, 20)
     print start, end
 
 main()
-
-
-
-
-            
-
-def main():
-    num_list = []
-    sub_list = subarray_with_given_sum(num_list, target_sum)
-
-    print sub_list
 
