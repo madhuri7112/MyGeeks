@@ -1,0 +1,10 @@
+
+
+
+maxDepth(node) {
+	
+	if (count(node.child) == 0)) {
+	   return 0;
+	}
+	return 1 + max[ maxDepth(node.child) ]
+}
