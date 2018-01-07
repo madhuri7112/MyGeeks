@@ -58,6 +58,36 @@ class Stack {
     }
 }
 
+class Queue {
+	public int maxSize;
+	public Node[] que;
+	public int start;
+	public int end;
+
+
+    public queue(int maxSize)
+    {
+    	this.maxSize = maxSize;
+        que = new Node[maxSize];
+        start = 0;
+        end = 0;
+    }
+
+	public void enque(Node node)
+	{      
+        que[end] = node;  
+        end++;     
+	}
+
+	public void deque(Node node)
+	{
+		firstElement = que[start];
+		start ++;
+
+		return firstElement;
+	}
+}
+
 
 public class bst {
 
@@ -77,7 +107,11 @@ public class bst {
          insertIntoBst(head, 14);
          insertIntoBst(head, 3);
 
-         printKDistanceNodes(head, 0, 4);
+
+
+         // int d = maxNumWR(head);
+         // System.out.println(d);
+         //printKDistanceNodes(head, 0, 4);
 
          // searchInTree(head, 11);
          // pathStack.printStack();
@@ -516,6 +550,55 @@ public class bst {
         printKDistanceNodes(head.rightChild, currentDistance, k);
 
         return;
+    }
+
+    public static int maxNumWR(Node head) 
+    {
+        Stack myStack = new Stack(100);
+
+        int min = head.data;
+
+        while (true) {
+        	while(head != null) {
+        	    myStack.push(head);
+        	    if (head.data<min) {
+        	    	min = head.data;
+        	    }
+        	    head = head.leftChild;
+            }
+
+            head = myStack.pop();
+            if (head == null) {
+            	break;
+            }
+            head = head.rightChild;
+        }
+        
+        return min;
+    }
+
+    public static void printBFS(Node head)
+    {
+    	 Queue myQueue = new Queue(100);
+         System.out.println(head.data);
+
+         while (head != null) {
+         	    if (head.leftChild!=null) {
+         	       myQueue.enque(head.leftChild);
+         	       System.out.println(head.leftChild.data);
+                }
+		        if (head.rightChild!=null) {
+		           myQueue.enque(head.rightChild);
+		           System.out.println(head.rightChild.data);
+		        }
+
+		        head = myQueue.deque();
+         }
+    }
+
+    public static void correctSwappedNodes(Node head)
+    {
+    	
     }
 
 }
