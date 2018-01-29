@@ -16,15 +16,20 @@ public class FirstDuplicate {
 
     for (int i = 0; i<str.length; i++) {
          if (!frequency.containsKey(str[i])) {
-               frequency.put(str[i], 0);
+               frequency.put(str[i], 1);
          } else {
+  System.out.println("uefwufg");
                //System.out.println(i);
                int f = frequency.get(str[i]);
                frequency.put(str[i], f+1);
          }
     }
+   
+    
 
     for(int i = 0; i<str.length; i++) {
+        System.out.println(str[i]);
+        System.out.println(frequency.get(str[i]));
         if (frequency.get(str[i])>1) {
             return str[i];
         }
