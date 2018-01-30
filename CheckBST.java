@@ -5,18 +5,25 @@ public class checkBST {
 
 	}
 
+        boolean checkBST(Node root) {
+        
+        return checkBSTUtil(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        
+    }
 
-	public static void isBST(Node head, int min, int max) {
+    boolean checkBSTUtil(Node root, int min, int max) {
+        
+        if (root == null) {
+            return true;
+        }
+        
+        if (root.data <= min || root.data >= max) {
+            return false;
+        }
+        
+        return checkBSTUtil(root.left, min, root.data) && checkBSTUtil(root.right, root.data, max);
+    }
 
-		  if (head == null) {
-		  	return true;
-		  }
-          if (head.data >=max || head.data <= min) {
-          	return false;
-          }
-          
 
-          return isBST(head.right, head.data, max) && isBST(head.left, min, head.data);
-
-	}
+ 
 }
